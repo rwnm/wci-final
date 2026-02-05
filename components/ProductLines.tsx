@@ -68,16 +68,16 @@ export default function ProductLines() {
   ];
 
   return (
-    <section ref={sectionRef} id="services" className="py-24 bg-slate-50 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section ref={sectionRef} id="services" className="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-slate-200">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 pb-8 border-b border-slate-200">
            <div className="max-w-xl">
               <div className="reveal opacity-0 flex items-center gap-3 mb-4">
                  <div className="w-8 h-[1px] bg-sky-500"></div>
                  <span className="text-xs font-mono text-sky-600 uppercase tracking-widest">Capabilities</span>
               </div>
-              <h2 className="reveal opacity-0 delay-100 text-3xl lg:text-4xl font-bold tracking-tight text-slate-900">
+              <h2 className="reveal opacity-0 delay-100 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900">
                 Integrated <span className="text-slate-500">Service Matrix</span>
               </h2>
            </div>
@@ -96,14 +96,14 @@ export default function ProductLines() {
           {services.map((service, i) => (
             <div 
               key={i} 
-              className="reveal opacity-0 group relative p-8 border-r border-b border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 cursor-default"
+              className="reveal opacity-0 group relative p-6 lg:p-8 border-r border-b border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 cursor-default"
               style={{ animationDelay: `${(i + 1) * 100}ms` }}
             >
               {/* Active Corner */}
               <div className="absolute top-0 left-0 w-full h-[2px] bg-sky-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
               {/* Icon & ID */}
-              <div className="flex justify-between items-start mb-8">
+              <div className="flex justify-between items-start mb-6 lg:mb-8">
                  <div className="text-slate-400 group-hover:text-sky-500 transition-colors duration-300">
                     {service.icon}
                  </div>
@@ -111,7 +111,7 @@ export default function ProductLines() {
               </div>
 
               {/* Text */}
-              <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-sky-700 transition-colors">{service.title}</h3>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 group-hover:text-sky-700 transition-colors">{service.title}</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
                 {service.desc}
               </p>

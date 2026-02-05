@@ -60,17 +60,17 @@ export default function Services() {
   ];
 
   return (
-    <section ref={sectionRef} id="sectors" className="py-24 bg-white border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section ref={sectionRef} id="sectors" className="py-16 sm:py-24 bg-white border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header - Precision Layout */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-slate-200">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 pb-8 border-b border-slate-200">
           <div className="max-w-xl">
              <div className="reveal opacity-0 flex items-center gap-3 mb-4">
                <div className="w-8 h-[1px] bg-slate-400"></div>
                <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Core Sectors</span>
              </div>
-             <h2 className="reveal opacity-0 delay-100 text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">
+             <h2 className="reveal opacity-0 delay-100 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">
                Operating <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-sky-400">Divisions</span>
              </h2>
           </div>
@@ -86,14 +86,14 @@ export default function Services() {
           {sectors.map((sector, i) => (
             <div 
               key={i} 
-              className="reveal opacity-0 group relative p-10 hover:bg-white hover:z-10 transition-all duration-500"
+              className="reveal opacity-0 group relative p-6 lg:p-10 hover:bg-white hover:z-10 transition-all duration-500"
               style={{ animationDelay: `${(i + 1) * 100}ms` }}
             >
               {/* Hover Effect Border */}
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-sky-500 transition-all duration-300 pointer-events-none" />
               
               {/* ID & Icon */}
-              <div className="flex justify-between items-start mb-12">
+              <div className="flex justify-between items-start mb-8 lg:mb-12">
                  <span className="font-mono text-sm text-slate-400 group-hover:text-sky-500 transition-colors">/{sector.id}</span>
                  <div className="w-12 h-12 bg-white border border-slate-200 flex items-center justify-center text-slate-600 group-hover:scale-110 group-hover:border-sky-500 group-hover:text-sky-500 transition-all duration-500 shadow-sm">
                     {sector.icon}
@@ -101,8 +101,8 @@ export default function Services() {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:translate-x-1 transition-transform duration-300">{sector.title}</h3>
-              <p className="text-sm text-slate-500 mb-8 leading-relaxed h-12">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:translate-x-1 transition-transform duration-300">{sector.title}</h3>
+              <p className="text-sm text-slate-500 mb-8 leading-relaxed h-auto sm:h-12">
                 {sector.desc}
               </p>
 

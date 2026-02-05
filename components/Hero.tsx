@@ -44,54 +44,54 @@ export default function Hero() {
       {/* Radial Gradient Overlay */}
       <div className="absolute inset-0 z-0 bg-gradient-to-tr from-[#0F172A] via-transparent to-[#1e293b]/50" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full py-16 lg:py-24">
-        <div className="grid lg:grid-cols-12 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 lg:py-24">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Content - Asymmetric Layout (7 cols) */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             {/* Architectural Badge */}
-            <div className="reveal opacity-0 w-fit mb-8 border border-sky-500/30 bg-sky-500/10 backdrop-blur-sm px-4 py-1.5 flex items-center gap-3">
+            <div className="reveal opacity-0 w-fit mb-6 lg:mb-8 border border-sky-500/30 bg-sky-500/10 backdrop-blur-sm px-4 py-1.5 flex items-center gap-3">
               <div className="w-2 h-2 bg-sky-400 rounded-sm animate-pulse" />
               <span className="text-xs font-mono text-sky-300 tracking-[0.2em] uppercase">System Status: Optimal</span>
             </div>
             
             {/* Headline */}
-            <h1 className="reveal opacity-0 delay-100 text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-8 leading-[0.9]">
+            <h1 className="reveal opacity-0 delay-100 text-4xl sm:text-6xl lg:text-8xl font-bold tracking-tighter text-white mb-6 lg:mb-8 leading-[0.9]">
               GLOBAL <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-white">INFRA</span><br />
               STRUCTURE
             </h1>
             
             {/* Technical Subheadline */}
-            <div className="reveal opacity-0 delay-200 border-l-2 border-sky-500/50 pl-6 mb-12 max-w-xl">
-              <p className="text-lg text-slate-400 font-light leading-relaxed">
+            <div className="reveal opacity-0 delay-200 border-l-2 border-sky-500/50 pl-6 mb-8 lg:mb-12 max-w-xl">
+              <p className="text-base sm:text-lg text-slate-400 font-light leading-relaxed">
                 Engineering precision for critical systems. Water management, power generation, and industrial fabrication executed with military-grade standards.
               </p>
             </div>
             
             {/* CTA Buttons */}
-            <div className="reveal opacity-0 delay-300 flex flex-wrap gap-6">
+            <div className="reveal opacity-0 delay-300 flex flex-wrap gap-4 lg:gap-6">
               <a 
                 href="#sectors" 
-                className="group relative px-8 py-4 bg-sky-600 hover:bg-sky-500 text-white transition-all duration-300 flex items-center gap-4 overflow-hidden"
+                className="group relative px-6 py-3 lg:px-8 lg:py-4 bg-sky-600 hover:bg-sky-500 text-white transition-all duration-300 flex items-center gap-4 overflow-hidden"
               >
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
-                <span className="font-mono text-sm tracking-widest uppercase">Explore Sectors</span>
+                <span className="font-mono text-xs sm:text-sm tracking-widest uppercase">Explore Sectors</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </a>
               <a 
                 href="#contact" 
-                className="group px-8 py-4 border border-slate-600 hover:border-sky-400 text-slate-300 hover:text-white transition-all duration-300 flex items-center gap-4"
+                className="group px-6 py-3 lg:px-8 lg:py-4 border border-slate-600 hover:border-sky-400 text-slate-300 hover:text-white transition-all duration-300 flex items-center gap-4"
               >
-                <span className="font-mono text-sm tracking-widest uppercase">Initiate Contact</span>
+                <span className="font-mono text-xs sm:text-sm tracking-widest uppercase">Initiate Contact</span>
               </a>
             </div>
           </div>
 
           {/* Visual - Blueprint Schematic (5 cols) */}
-          <div className="lg:col-span-5 relative lg:h-[600px] flex items-center justify-center lg:justify-end reveal opacity-0 delay-200">
+          <div className="lg:col-span-5 relative h-[400px] lg:h-[600px] flex items-center justify-center lg:justify-end reveal opacity-0 delay-200 mt-8 lg:mt-0">
              {/* Technical Drawing Graphic */}
              <div className="relative w-full aspect-square max-w-lg">
                 {/* Rotating Rings */}

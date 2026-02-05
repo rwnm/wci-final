@@ -20,17 +20,17 @@ export default function Navbar() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
           ? "py-3 bg-white/95 backdrop-blur-xl shadow-[0_1px_0_0_rgba(0,0,0,0.05)]" 
-          : "py-5 bg-transparent"
+          : "py-4 sm:py-5 bg-transparent"
       }`}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-4 group">
               <div className="relative">
-                <div className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 ${
+                <div className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center transition-all duration-300 ${
                   isScrolled ? "bg-slate-900" : "bg-slate-900"
                 }`}>
-                  <span className="text-white font-bold text-sm tracking-tight">WCI</span>
+                  <span className="text-white font-bold text-xs sm:text-sm tracking-tight">WCI</span>
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300" />
               </div>
@@ -68,7 +68,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+              className="lg:hidden p-3 rounded-lg hover:bg-slate-100 transition-colors active:scale-95"
               aria-label="Toggle menu"
             >
               <div className="w-6 h-5 flex flex-col justify-between">
@@ -85,31 +85,37 @@ export default function Navbar() {
       <div className={`fixed inset-0 z-40 lg:hidden transition-all duration-500 ${
         isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       }`}>
-        <div className="absolute inset-0 bg-slate-900/20 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
-        <div className={`absolute top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl transition-transform duration-500 ${
+        <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
+        <div className={`absolute top-0 right-0 w-[85%] max-w-sm h-full bg-white shadow-2xl transition-transform duration-500 ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}>
-          <div className="p-8 pt-24">
-            <nav className="space-y-2">
+          <div className="flex flex-col h-full p-8 pt-24">
+            <nav className="space-y-4 flex-1">
               {navItems.map((item, i) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-4 py-4 text-lg font-medium text-slate-900 hover:bg-slate-50 rounded-xl transition-colors"
+                  className="block px-4 py-4 text-xl font-medium text-slate-900 hover:bg-slate-50 rounded-xl transition-colors border-b border-slate-100 last:border-0"
                   style={{ animationDelay: `${i * 50}ms` }}
                 >
                   {item}
                 </a>
               ))}
             </nav>
-            <div className="mt-8 pt-8 border-t border-slate-100">
+            <div className="mt-auto pt-8 border-t border-slate-100 pb-8">
               <a
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full py-4 bg-slate-900 text-white text-center font-semibold rounded-xl hover:bg-slate-800 transition-colors"
+                className="group relative block w-full py-4 bg-slate-900 text-white text-center font-semibold rounded-xl overflow-hidden transition-all active:scale-[0.98]"
               >
-                Get Started
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Get Started
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-sky-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
             </div>
           </div>
