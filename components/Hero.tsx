@@ -19,27 +19,27 @@ export default function Hero() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-8">
               <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-700">Precision Engineering</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-700">Global Infrastructure</span>
             </div>
             
             <h1 className="text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-slate-900 mb-8">
-              Advanced <br />
-              <span className="text-blue-600">Synthetic</span> <br />
-              Excellence.
+              Water. <br />
+              <span className="text-blue-600">Power.</span> <br />
+              Progress.
             </h1>
             
             <p className="text-xl text-slate-500 leading-relaxed max-w-lg font-light mb-12 border-l-4 border-slate-100 pl-8 italic">
-              "We don't just supply fluids; we engineer molecular stability for the world's most critical industrial infrastructure."
+              "Engineering sustainable solutions for the world's most critical resources. We build the future of water, energy, and infrastructure."
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
-              <button className="group relative px-8 py-5 bg-slate-900 text-white rounded-xl overflow-hidden transition-all hover:scale-[1.02]">
+              <a href="#sectors" className="group relative px-8 py-5 bg-slate-900 text-white rounded-xl overflow-hidden transition-all hover:scale-[1.02] inline-flex items-center justify-center">
                 <div className="absolute inset-0 bg-blue-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                <span className="relative z-10 font-bold tracking-widest text-xs uppercase">The ECOSYN™ Portfolio</span>
-              </button>
-              <button className="px-8 py-5 border-2 border-slate-100 text-slate-900 font-bold rounded-xl hover:bg-slate-50 transition-all text-xs uppercase tracking-widest">
-                Technical Consultancy
-              </button>
+                <span className="relative z-10 font-bold tracking-widest text-xs uppercase">Our Sectors</span>
+              </a>
+              <a href="#services" className="px-8 py-5 border-2 border-slate-100 text-slate-900 font-bold rounded-xl hover:bg-slate-50 transition-all text-xs uppercase tracking-widest inline-flex items-center justify-center">
+                Our Services
+              </a>
             </div>
           </div>
 
@@ -66,22 +66,22 @@ export default function Hero() {
                 
                 {/* Information Overlay */}
                 <div className="absolute top-8 right-8 flex flex-col gap-2">
-                  <div className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-lg border border-white/10 text-[10px] text-white font-bold tracking-widest uppercase">E-Series 2026</div>
-                  <div className="px-4 py-2 bg-blue-600/90 backdrop-blur-md rounded-lg text-[10px] text-white font-bold tracking-widest uppercase shadow-xl">Optimized Flow</div>
+                  <div className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-lg border border-white/10 text-[10px] text-white font-bold tracking-widest uppercase">Global Operations</div>
+                  <div className="px-4 py-2 bg-blue-600/90 backdrop-blur-md rounded-lg text-[10px] text-white font-bold tracking-widest uppercase shadow-xl">Sustainable Future</div>
                 </div>
               </div>
 
               {/* Floating Technical Card */}
               <div className="absolute -bottom-10 -left-10 z-20 bg-white p-10 rounded-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100 max-w-[320px] hover:-translate-y-2 transition-transform duration-500">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center text-white text-2xl font-bold italic">E</div>
+                  <div className="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center text-white text-2xl font-bold italic">W</div>
                   <div>
-                    <h4 className="font-black text-slate-900 tracking-tight uppercase">ECOSYN™ POE</h4>
-                    <p className="text-[10px] text-blue-600 uppercase tracking-widest font-black">Performance Grade</p>
+                    <h4 className="font-black text-slate-900 tracking-tight uppercase">Water Systems</h4>
+                    <p className="text-[10px] text-blue-600 uppercase tracking-widest font-black">Core Infrastructure</p>
                   </div>
                 </div>
                 <p className="text-sm text-slate-500 leading-relaxed font-light">
-                  Proprietary synthetic ester technology designed for ultra-low volatility and superior thermal conductivity.
+                  Advanced purification and distribution networks serving millions globally.
                 </p>
               </div>
             </div>

@@ -1,13 +1,13 @@
 export default function Metrics() {
   const stats = [
-    { label: "Market Distribution", value: "60+", sub: "Global Economies" },
-    { label: "Fluid Formulations", value: "150+", sub: "Technical Spec Lines" },
-    { label: "Engineering Heritage", value: "30+", sub: "Years of Research" },
-    { label: "Operational Model", value: "100%", sub: "Independent Ownership" },
+    { label: "Global Reach", value: "60+", sub: "Countries Served" },
+    { label: "Major Projects", value: "150+", sub: "Infrastructure Assets" },
+    { label: "Industry Experience", value: "30+", sub: "Years of Excellence" },
+    { label: "Client Satisfaction", value: "100%", sub: "Commitment to Quality" },
   ];
 
   return (
-    <section className="py-32 bg-slate-950 text-white relative overflow-hidden">
+    <section id="about" className="py-32 bg-slate-950 text-white relative overflow-hidden">
       {/* Decorative Blueprint Lines */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-px bg-white" />

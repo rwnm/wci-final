@@ -1,19 +1,19 @@
 export default function Services() {
   const services = [
     {
-      title: "Molecular Strategy",
-      desc: "Our senior tribologists engineer custom fluid strategies for hardware commissioning and development.",
-      details: ["Application Mapping", "Hardware Compatibility", "Performance Stress Tests"]
+      title: "Infrastructure Development",
+      desc: "End-to-end management of critical infrastructure projects from planning to execution.",
+      details: ["Urban Planning", "Transportation", "Smart Cities"]
     },
     {
-      title: "Precision Blending",
-      desc: "Custom chemical formulations engineered for unique extreme-temp or zero-pressure environments.",
-      details: ["Private Label Ops", "Custom Viscosity Tuning", "Advanced Additive Logic"]
+      title: "Power Solutions",
+      desc: "Sustainable energy generation and distribution systems for a reliable future.",
+      details: ["Grid Modernization", "Renewable Integration", "Energy Storage"]
     },
     {
-      title: "Digital Oil Analysis",
-      desc: "Comprehensive diagnostic programs powered by data to predict maintenance and extend life.",
-      details: ["Wear Meta-Tracking", "Contamination Analysis", "Predictive Diagnostics"]
+      title: "Water Systems",
+      desc: "Advanced water management technologies ensuring purity and access globally.",
+      details: ["Desalination", "Wastewater Treatment", "Distribution"]
     }
   ];
 
@@ -25,12 +25,12 @@ export default function Services() {
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="max-w-3xl mb-32 space-y-8">
-          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-600">Expertise on Demand</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-600">Core Capabilities</span>
           <h2 className="text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-[0.95]">
-            Engineering<br />Beyond the Fluid.
+            Engineering<br />Global Progress.
           </h2>
           <p className="text-xl text-slate-500 font-light max-w-xl leading-relaxed italic border-l-2 border-blue-600 pl-8">
-            "Hardware is only as resilient as the chemistry protecting it."
+            "Delivering integrated solutions for the world's most complex challenges."
           </p>
         </div>
 

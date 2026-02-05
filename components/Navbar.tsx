@@ -22,13 +22,13 @@ export default function Navbar() {
             WCI
           </div>
           <div className="flex flex-col">
-            <span className="text-sm font-black tracking-[0.2em] text-slate-900 uppercase leading-none">Wipa Chemicals</span>
-            <span className="text-[10px] font-medium text-blue-600 uppercase tracking-widest mt-1">International</span>
+            <span className="text-sm font-black tracking-[0.2em] text-slate-900 uppercase leading-none">WCI Global</span>
+            <span className="text-[9px] font-medium text-blue-600 uppercase tracking-widest mt-1">Water · Power · Infra</span>
           </div>
         </Link>
         
         <div className="hidden md:flex items-center gap-10">
-          {["Products", "Services", "Industries", "About"].map((item) => (
+          {["Services", "Sectors", "About"].map((item) => (
             <a 
               key={item} 
               href={`#${item.toLowerCase()}`} 
