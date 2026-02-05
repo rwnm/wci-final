@@ -5,43 +5,116 @@ import Link from "next/link"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50)
+    const handleScroll = () => setIsScrolled(window.scrollY > 20)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const navItems = ["Sectors", "Services", "About", "Contact"]
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? "py-4 bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-sm" : "py-8 bg-transparent"
-    }`}>
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center text-white font-bold text-xs italic transition-transform group-hover:rotate-12">
-            WCI
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-black tracking-[0.2em] text-slate-900 uppercase leading-none">WCI Global</span>
-            <span className="text-[9px] font-medium text-blue-600 uppercase tracking-widest mt-1">Water · Power · Infra</span>
-          </div>
-        </Link>
-        
-        <div className="hidden md:flex items-center gap-10">
-          {["Services", "Sectors", "About"].map((item) => (
-            <a 
-              key={item} 
-              href={`#${item.toLowerCase()}`} 
-              className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 hover:text-slate-900 transition-colors"
+    <>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled 
+          ? "py-3 bg-white/95 backdrop-blur-xl shadow-[0_1px_0_0_rgba(0,0,0,0.05)]" 
+          : "py-5 bg-transparent"
+      }`}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-4 group">
+              <div className="relative">
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 ${
+                  isScrolled ? "bg-slate-900" : "bg-slate-900"
+                }`}>
+                  <span className="text-white font-bold text-sm tracking-tight">WCI</span>
+                </div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300" />
+              </div>
+              <div className="hidden sm:flex flex-col">
+                <span className={`text-base font-bold tracking-tight transition-colors duration-300 ${
+                  isScrolled ? "text-slate-900" : "text-slate-900"
+                }`}>WCI Global</span>
+                <span className="text-[10px] font-medium text-sky-600 uppercase tracking-[0.2em]">Water · Power · Infrastructure</span>
+              </div>
+            </Link>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center gap-1">
+              {navItems.map((item) => (
+                <a 
+                  key={item} 
+                  href={`#${item.toLowerCase()}`} 
+                  className={`px-5 py-2.5 text-sm font-medium transition-all duration-300 rounded-lg hover:bg-slate-100 ${
+                    isScrolled ? "text-slate-600 hover:text-slate-900" : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  {item}
+                </a>
+              ))}
+              <div className="w-px h-6 bg-slate-200 mx-4" />
+              <a 
+                href="#contact" 
+                className="group relative px-6 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-slate-900/20"
+              >
+                <span className="relative z-10">Get Started</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-sky-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+              aria-label="Toggle menu"
             >
-              {item}
-            </a>
-          ))}
-          <a href="#contact" className="px-6 py-3 bg-slate-900 text-white text-[11px] font-bold uppercase tracking-[0.2em] rounded-lg hover:bg-blue-600 hover:-translate-y-0.5 transition-all shadow-lg shadow-slate-200 inline-block">
-            Contact
-          </a>
+              <div className="w-6 h-5 flex flex-col justify-between">
+                <span className={`block h-0.5 bg-slate-900 transition-all duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
+                <span className={`block h-0.5 bg-slate-900 transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`} />
+                <span className={`block h-0.5 bg-slate-900 transition-all duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+              </div>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 z-40 lg:hidden transition-all duration-500 ${
+        isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+      }`}>
+        <div className="absolute inset-0 bg-slate-900/20 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
+        <div className={`absolute top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl transition-transform duration-500 ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}>
+          <div className="p-8 pt-24">
+            <nav className="space-y-2">
+              {navItems.map((item, i) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-4 text-lg font-medium text-slate-900 hover:bg-slate-50 rounded-xl transition-colors"
+                  style={{ animationDelay: `${i * 50}ms` }}
+                >
+                  {item}
+                </a>
+              ))}
+            </nav>
+            <div className="mt-8 pt-8 border-t border-slate-100">
+              <a
+                href="#contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full py-4 bg-slate-900 text-white text-center font-semibold rounded-xl hover:bg-slate-800 transition-colors"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </>
   )
 }
