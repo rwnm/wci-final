@@ -1,91 +1,140 @@
+"use client"
+
+import { useEffect, useRef } from "react"
+
 export default function Hero() {
+  const heroRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-in-up")
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    const elements = heroRef.current?.querySelectorAll(".reveal")
+    elements?.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
-      {/* Background Architectural Elements */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        {/* Large Gradient Blur */}
-        <div className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-blue-50 rounded-full blur-[120px] opacity-60" />
-        {/* Technical Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ 
-          backgroundImage: `radial-gradient(#0f172a 1px, transparent 1px)`, 
-          backgroundSize: '40px 40px' 
-        }} />
-        {/* Vertical Accent Line */}
-        <div className="absolute top-0 left-1/2 w-px h-full bg-slate-100 hidden lg:block" />
+    <section ref={heroRef} className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#0F172A] text-white">
+      {/* Blueprint Grid Background */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" strokeWidth="0.5" />
+            </pattern>
+            <pattern id="large-grid-pattern" width="200" height="200" patternUnits="userSpaceOnUse">
+              <rect width="200" height="200" fill="url(#grid-pattern)" />
+              <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#38bdf8" strokeWidth="1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#large-grid-pattern)" />
+        </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-24 items-center">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-8">
-              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-700">Global Infrastructure</span>
+      {/* Radial Gradient Overlay */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-tr from-[#0F172A] via-transparent to-[#1e293b]/50" />
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full py-16 lg:py-24">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
+          
+          {/* Content - Asymmetric Layout (7 cols) */}
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            {/* Architectural Badge */}
+            <div className="reveal opacity-0 w-fit mb-8 border border-sky-500/30 bg-sky-500/10 backdrop-blur-sm px-4 py-1.5 flex items-center gap-3">
+              <div className="w-2 h-2 bg-sky-400 rounded-sm animate-pulse" />
+              <span className="text-xs font-mono text-sky-300 tracking-[0.2em] uppercase">System Status: Optimal</span>
             </div>
             
-            <h1 className="text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-slate-900 mb-8">
-              Water. <br />
-              <span className="text-blue-600">Power.</span> <br />
-              Progress.
+            {/* Headline */}
+            <h1 className="reveal opacity-0 delay-100 text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-8 leading-[0.9]">
+              GLOBAL <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-white">INFRA</span><br />
+              STRUCTURE
             </h1>
             
-            <p className="text-xl text-slate-500 leading-relaxed max-w-lg font-light mb-12 border-l-4 border-slate-100 pl-8 italic">
-              "Engineering sustainable solutions for the world's most critical resources. We build the future of water, energy, and infrastructure."
-            </p>
+            {/* Technical Subheadline */}
+            <div className="reveal opacity-0 delay-200 border-l-2 border-sky-500/50 pl-6 mb-12 max-w-xl">
+              <p className="text-lg text-slate-400 font-light leading-relaxed">
+                Engineering precision for critical systems. Water management, power generation, and industrial fabrication executed with military-grade standards.
+              </p>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-6">
-              <a href="#sectors" className="group relative px-8 py-5 bg-slate-900 text-white rounded-xl overflow-hidden transition-all hover:scale-[1.02] inline-flex items-center justify-center">
-                <div className="absolute inset-0 bg-blue-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                <span className="relative z-10 font-bold tracking-widest text-xs uppercase">Our Sectors</span>
+            {/* CTA Buttons */}
+            <div className="reveal opacity-0 delay-300 flex flex-wrap gap-6">
+              <a 
+                href="#sectors" 
+                className="group relative px-8 py-4 bg-sky-600 hover:bg-sky-500 text-white transition-all duration-300 flex items-center gap-4 overflow-hidden"
+              >
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
+                <span className="font-mono text-sm tracking-widest uppercase">Explore Sectors</span>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </a>
-              <a href="#services" className="px-8 py-5 border-2 border-slate-100 text-slate-900 font-bold rounded-xl hover:bg-slate-50 transition-all text-xs uppercase tracking-widest inline-flex items-center justify-center">
-                Our Services
+              <a 
+                href="#contact" 
+                className="group px-8 py-4 border border-slate-600 hover:border-sky-400 text-slate-300 hover:text-white transition-all duration-300 flex items-center gap-4"
+              >
+                <span className="font-mono text-sm tracking-widest uppercase">Initiate Contact</span>
               </a>
             </div>
           </div>
 
-          <div className="relative lg:h-[700px] flex items-center justify-center">
-            {/* Main Visual Component: The "Molecule/Blueprint" Graphic */}
-            <div className="relative w-full aspect-square max-w-lg">
-              {/* Outer Decorative Circles */}
-              <div className="absolute inset-0 border border-slate-100 rounded-full scale-[1.1] animate-[spin_20s_linear_infinite]" />
-              <div className="absolute inset-0 border border-dashed border-slate-200 rounded-full animate-[spin_30s_linear_infinite_reverse]" />
-              
-              {/* Core Image Container */}
-              <div className="relative z-10 w-full h-full bg-slate-50 rounded-[60px] shadow-2xl overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center p-12">
-                   {/* This placeholder represents the high-end industrial photo */}
-                   <div className="relative w-full h-full flex items-center justify-center">
-                      <div className="text-white opacity-5 text-9xl font-black italic tracking-tighter absolute -rotate-12">WCI</div>
-                      <div className="w-48 h-px bg-white/20 absolute rotate-45" />
-                      <div className="w-48 h-px bg-white/20 absolute -rotate-45" />
-                      <div className="w-32 h-32 border border-blue-500/50 rounded-full flex items-center justify-center">
-                        <div className="w-16 h-16 bg-blue-600 rounded-2xl shadow-[0_0_50px_rgba(37,99,235,0.5)] animate-pulse" />
-                      </div>
-                   </div>
-                </div>
+          {/* Visual - Blueprint Schematic (5 cols) */}
+          <div className="lg:col-span-5 relative lg:h-[600px] flex items-center justify-center lg:justify-end reveal opacity-0 delay-200">
+             {/* Technical Drawing Graphic */}
+             <div className="relative w-full aspect-square max-w-lg">
+                {/* Rotating Rings */}
+                <div className="absolute inset-0 border border-sky-500/20 rounded-full animate-[spin_60s_linear_infinite]" />
+                <div className="absolute inset-4 border border-dashed border-slate-600/50 rounded-full animate-[spin_40s_linear_infinite_reverse]" />
                 
-                {/* Information Overlay */}
-                <div className="absolute top-8 right-8 flex flex-col gap-2">
-                  <div className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-lg border border-white/10 text-[10px] text-white font-bold tracking-widest uppercase">Global Operations</div>
-                  <div className="px-4 py-2 bg-blue-600/90 backdrop-blur-md rounded-lg text-[10px] text-white font-bold tracking-widest uppercase shadow-xl">Sustainable Future</div>
-                </div>
-              </div>
-
-              {/* Floating Technical Card */}
-              <div className="absolute -bottom-10 -left-10 z-20 bg-white p-10 rounded-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100 max-w-[320px] hover:-translate-y-2 transition-transform duration-500">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center text-white text-2xl font-bold italic">W</div>
-                  <div>
-                    <h4 className="font-black text-slate-900 tracking-tight uppercase">Water Systems</h4>
-                    <p className="text-[10px] text-blue-600 uppercase tracking-widest font-black">Core Infrastructure</p>
+                {/* Central Hexagon/Geometry */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="relative w-2/3 h-2/3 border border-sky-500/30 bg-[#0F172A]/80 backdrop-blur-md flex items-center justify-center transform rotate-45 hover:rotate-0 transition-all duration-700">
+                    <div className="absolute inset-2 border border-sky-500/10" />
+                    <div className="w-16 h-16 bg-sky-500/10 flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-all duration-700">
+                       <svg className="w-8 h-8 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                       </svg>
+                    </div>
                   </div>
                 </div>
-                <p className="text-sm text-slate-500 leading-relaxed font-light">
-                  Advanced purification and distribution networks serving millions globally.
-                </p>
-              </div>
-            </div>
+
+                {/* Data Points */}
+                <div className="absolute top-1/4 right-0 flex items-center gap-2 animate-pulse">
+                   <div className="w-2 h-2 bg-sky-500 rounded-full" />
+                   <div className="h-px w-12 bg-sky-500/50" />
+                   <span className="text-[10px] font-mono text-sky-400">SECURE.01</span>
+                </div>
+                <div className="absolute bottom-1/4 left-0 flex items-center gap-2 flex-row-reverse animate-pulse delay-75">
+                   <div className="w-2 h-2 bg-emerald-500 rounded-full" />
+                   <div className="h-px w-12 bg-emerald-500/50" />
+                   <span className="text-[10px] font-mono text-emerald-400">ACTIVE.04</span>
+                </div>
+             </div>
           </div>
+
+        </div>
+      </div>
+      
+      {/* Bottom Bar */}
+      <div className="absolute bottom-0 w-full border-t border-slate-800 bg-[#0F172A]/90 backdrop-blur-sm py-4">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center text-xs font-mono text-slate-500">
+           <span>COORD: 34.0522° N, 118.2437° W</span>
+           <div className="flex gap-8">
+             <span>LATENCY: 12ms</span>
+             <span>UPTIME: 99.99%</span>
+           </div>
         </div>
       </div>
     </section>
