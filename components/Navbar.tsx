@@ -37,9 +37,9 @@ export default function Navbar() {
               {item}
             </a>
           ))}
-          <button className="px-6 py-3 bg-slate-900 text-white text-[11px] font-bold uppercase tracking-[0.2em] rounded-lg hover:bg-blue-600 hover:-translate-y-0.5 transition-all shadow-lg shadow-slate-200">
+          <a href="#contact" className="px-6 py-3 bg-slate-900 text-white text-[11px] font-bold uppercase tracking-[0.2em] rounded-lg hover:bg-blue-600 hover:-translate-y-0.5 transition-all shadow-lg shadow-slate-200 inline-block">
             Contact
-          </button>
+          </a>
         </div>
       </div>
     </nav>
