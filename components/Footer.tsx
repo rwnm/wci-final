@@ -10,19 +10,19 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-black tracking-widest text-slate-900 uppercase">WCI Global</span>
-                <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">Infrastructure</span>
+                <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">Water · Power · Infra</span>
               </div>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed font-light max-w-xs uppercase tracking-wider">
-              Leading global provider of integrated water, power, and infrastructure solutions. Building a sustainable tomorrow.
+              Leading the development of sustainable water, power, and infrastructure projects worldwide. Engineering a better tomorrow.
             </p>
           </div>
 
           <div>
-            <h4 className="text-[10px] font-black text-slate-900 mb-10 uppercase tracking-[0.4em]">Solutions</h4>
+            <h4 className="text-[10px] font-black text-slate-900 mb-10 uppercase tracking-[0.4em]">Sectors</h4>
             <ul className="space-y-4">
-              {["Water Management", "Power Generation", "Urban Infrastructure", "Consultancy"].map(item => (
-                <li key={item}><a href="#" className="text-[11px] font-bold text-slate-500 hover:text-blue-600 uppercase tracking-widest transition-colors">{item}</a></li>
+              {["Water Management", "Power Generation", "Infrastructure", "Sustainability"].map(item => (
+                <li key={item}><a href="#sectors" className="text-[11px] font-bold text-slate-500 hover:text-blue-600 uppercase tracking-widest transition-colors">{item}</a></li>
               ))}
             </ul>
           </div>
@@ -30,16 +30,16 @@ export default function Footer() {
           <div>
             <h4 className="text-[10px] font-black text-slate-900 mb-10 uppercase tracking-[0.4em]">Corporate</h4>
             <ul className="space-y-4">
-              {["About Us", "Global Presence", "Sustainability", "Careers"].map(item => (
-                <li key={item}><a href="#" className="text-[11px] font-bold text-slate-500 hover:text-blue-600 uppercase tracking-widest transition-colors">{item}</a></li>
+              {["About Us", "Our Projects", "Investor Relations", "Careers"].map(item => (
+                <li key={item}><a href="#about" className="text-[11px] font-bold text-slate-500 hover:text-blue-600 uppercase tracking-widest transition-colors">{item}</a></li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-[10px] font-black text-slate-900 mb-10 uppercase tracking-[0.4em]">Connect</h4>
+            <h4 className="text-[10px] font-black text-slate-900 mb-10 uppercase tracking-[0.4em]">Contact</h4>
             <p className="text-sm text-slate-400 leading-relaxed font-light mb-8 uppercase tracking-widest">
-              Contact our global headquarters for project inquiries.
+              Get in touch with our global headquarters for project inquiries.
             </p>
             <button className="text-blue-600 text-[11px] font-black uppercase tracking-[0.3em] hover:text-slate-900 transition-colors">
               Contact Us ↗
@@ -52,7 +52,7 @@ export default function Footer() {
             © {new Date().getFullYear()} WCI Global. All rights reserved.
           </p>
           <div className="flex gap-10">
-            {["Privacy", "Terms", "Sitemap"].map(item => (
+            {["Privacy Policy", "Terms of Service", "Legal"].map(item => (
               <a key={item} href="#" className="text-[10px] font-bold text-slate-300 hover:text-slate-900 uppercase tracking-widest transition-colors">{item}</a>
             ))}
           </div>
