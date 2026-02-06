@@ -19,7 +19,7 @@ export default function OpenClawDemo() {
         <header className="mb-40 text-center animate-fade-in-up">
           <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8">
             <span className="text-white">OpenClaw</span>
-            <span className="block mt-2 bg-gradient-to-r from-red-500 via-orange-500 to-rose-500 bg-clip-text text-transparent">
+            <span className="block mt-2 py-2 bg-gradient-to-r from-red-500 via-orange-500 to-rose-500 bg-clip-text text-transparent">
               Intelligence Node
             </span>
           </h1>
