@@ -9,19 +9,14 @@ export default function OpenClawDemo() {
       
       {/* Background Effects */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[128px] animate-pulse-glow" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[128px] animate-pulse-glow delay-1000" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[128px] animate-pulse-glow" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[128px] animate-pulse-glow delay-1000" />
       </div>
 
       <main className="relative z-10 max-w-7xl mx-auto px-6 py-24">
         
         {/* Hero Section */}
         <header className="mb-24 text-center animate-fade-in-up">
-          <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-slate-700 bg-slate-900/50 backdrop-blur-md">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent text-sm font-semibold tracking-wide uppercase">
-              System Status: Operational
-            </span>
-          </div>
           <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8">
             <span className="text-white">OpenClaw</span>
             <span className="block mt-2 bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -102,60 +97,92 @@ export default function OpenClawDemo() {
           </div>
         </section>
 
-        {/* Model Tier Grid */}
+        {/* Model Tier Hierarchy */}
         <section className="mb-32">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Intelligence Tiers</h2>
-            <p className="text-slate-400">Adaptive model selection based on task complexity.</p>
+            <h2 className="text-4xl font-bold mb-4">Model Routing Hierarchy</h2>
+            <p className="text-slate-400">Advanced multi-tier dispatch system for optimal cognitive performance.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-16">
             
-            {/* Tier 1 */}
-            <div className="group relative p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-green-500/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="absolute inset-0 bg-green-500/5 opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-300" />
-              <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+            {/* Tier Group 1: Primary */}
+            <div className="relative">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+                <h3 className="text-2xl font-bold text-blue-100 tracking-tight">Primary Tiers</h3>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Tier 1: Speed</h3>
-              <p className="text-sm text-green-400 font-mono mb-4">gemini-3-flash-preview</p>
-              <p className="text-slate-400 leading-relaxed text-sm">
-                Optimized for day-to-day interactions, quick queries, and simple automation tasks. Ultra-low latency and high efficiency.
-              </p>
-            </div>
-
-            {/* Tier 2 */}
-            <div className="group relative p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-yellow-500/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="absolute inset-0 bg-yellow-500/5 opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-300" />
-              <div className="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Tier 2: Reasoning</h3>
-              <p className="text-sm text-yellow-400 font-mono mb-4">gemini-3-pro-preview</p>
-              <p className="text-slate-400 leading-relaxed text-sm">
-                Balances performance and cost for complex manual tasks requiring nuanced understanding and logical deduction.
-              </p>
-            </div>
-
-            {/* Tier 3 */}
-            <div className="group relative p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-300" />
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-3xl opacity-20 group-hover:opacity-40 blur transition duration-300 -z-10" />
               
-              <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Gemini 3 Flash */}
+                <div className="group p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-900 hover:shadow-lg hover:shadow-blue-500/10">
+                  <div className="flex justify-between items-start mb-4">
+                    <h4 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">Gemini 3 Flash</h4>
+                    <span className="px-2 py-1 rounded text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">Day-to-day</span>
+                  </div>
+                  <p className="text-sm text-slate-400">High-speed inference for routine interactions, summarization, and quick queries.</p>
+                </div>
+
+                {/* Gemini 3 Pro */}
+                <div className="group p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-900 hover:shadow-lg hover:shadow-blue-500/10">
+                  <div className="flex justify-between items-start mb-4">
+                    <h4 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">Gemini 3 Pro</h4>
+                    <span className="px-2 py-1 rounded text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">Complex Reasoning</span>
+                  </div>
+                  <p className="text-sm text-slate-400">Balanced performance for nuanced tasks requiring logical deduction and context handling.</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Tier 3: Deep Logic</h3>
-              <p className="text-sm text-purple-400 font-mono mb-4 break-words">claude-3-opus-4-5-thinking</p>
-              <p className="text-slate-400 leading-relaxed text-sm">
-                Deployed for heavy coding, sub-agent orchestration, and deep reasoning tasks where precision is paramount.
-              </p>
+            </div>
+
+            {/* Tier Group 2: Specialized / Antigravity */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-purple-500/5 rounded-3xl -m-4 blur-2xl pointer-events-none"></div>
+              <div className="flex items-center gap-4 mb-8 relative z-10">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-purple-500/50"></div>
+                <h3 className="text-2xl font-bold text-purple-100 tracking-tight">Specialized / Antigravity Tier</h3>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-purple-500/50"></div>
+              </div>
+              <p className="text-center text-purple-300/60 mb-8 -mt-4 text-sm font-mono tracking-wide relative z-10">ADVANCED LOGIC & ORCHESTRATION</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 relative z-10">
+                {[
+                  { name: "Flash 3", role: "Speed Logic" },
+                  { name: "Pro 3", role: "Reasoning" },
+                  { name: "Sonnet 4.5", role: "Code/Creative" },
+                  { name: "Opus 4.5", role: "Deep Thought" },
+                  { name: "Open Source OpenAI", role: "Flexibility" }
+                ].map((model, i) => (
+                  <div key={i} className="group p-4 rounded-xl bg-slate-900/80 border border-purple-500/20 hover:border-purple-500 hover:bg-slate-900 transition-all duration-300 flex flex-col items-center text-center">
+                    <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <span className="text-xs text-purple-400 font-bold">{i + 1}</span>
+                    </div>
+                    <h4 className="text-sm font-semibold text-white mb-1">{model.name}</h4>
+                    <p className="text-xs text-purple-300/70">{model.role}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Tier Group 3: Sub-Agent Fallback */}
+            <div className="relative">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-slate-700"></div>
+                <h3 className="text-xl font-bold text-slate-400 tracking-tight">Sub-Agent Fallback Tier</h3>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-slate-700"></div>
+              </div>
+
+              <div className="max-w-2xl mx-auto p-6 rounded-2xl bg-slate-900/30 border border-slate-800 border-dashed flex items-center gap-6 justify-center hover:border-slate-600 transition-colors">
+                <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center shrink-0">
+                   <svg className="w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <div className="text-left">
+                  <h4 className="text-base font-semibold text-slate-300">Gemini CLI Models</h4>
+                  <p className="text-sm text-slate-500">Robust fallback for terminal-based operations and system-level tasks.</p>
+                </div>
+              </div>
             </div>
 
           </div>
