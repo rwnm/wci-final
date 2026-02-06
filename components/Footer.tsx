@@ -26,7 +26,8 @@ export default function Footer() {
   const footerLinks = {
     sectors: ["Water Management", "Power Generation", "Infrastructure", "Sustainability"],
     company: ["About Us", "Our Projects", "Investor Relations", "Careers"],
-    resources: ["Case Studies", "News & Insights", "Technical Papers", "FAQ"]
+    resources: ["Case Studies", "News & Insights", "Technical Papers", "FAQ"],
+    internal: ["OpenClaw Demo"]
   }
 
   const socialLinks = [
@@ -80,7 +81,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Grid */}
-        <div className="reveal opacity-0 delay-100 grid md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 pb-16 border-b border-white/10">
+        <div className="reveal opacity-0 delay-100 grid md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 pb-16 border-b border-white/10">
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-3">
@@ -144,6 +145,20 @@ export default function Footer() {
               {footerLinks.resources.map(item => (
                 <li key={item}>
                   <a href="#" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Internal */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-6 uppercase tracking-wider">Internal</h4>
+            <ul className="space-y-4">
+              {footerLinks.internal.map(item => (
+                <li key={item}>
+                  <a href="/openclaw-demo" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">
                     {item}
                   </a>
                 </li>
