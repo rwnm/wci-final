@@ -25,42 +25,42 @@ export default function Services() {
 
   const sectors = [
     {
-      title: "Water Management",
+      title: "Compressor Systems",
       id: "01",
-      desc: "Sustainable treatment, purification, and global distribution systems.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-      ),
-      details: ["Desalination", "Wastewater", "Distribution"]
-    },
-    {
-      title: "Power Generation",
-      id: "02",
-      desc: "Renewable and conventional energy solutions for industrial scale.",
+      desc: "High-efficiency synthetic fluids for rotary screw, vane, and centrifugal compressors.",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      details: ["Solar Arrays", "Grid Systems", "Storage"]
+      details: ["Rotary Screw", "Reciprocating", "Centrifugal"]
     },
     {
-      title: "Infrastructure",
-      id: "03",
-      desc: "Critical transport and urban development driving economic connectivity.",
+      title: "Engine Power",
+      id: "02",
+      desc: "Advanced protection for natural gas, biogas, and heavy-duty 4-stroke engines.",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
         </svg>
       ),
-      details: ["Transit Hubs", "Smart Cities", "Industrial"]
+      details: ["Natural Gas", "Biogas", "Heavy Diesel"]
+    },
+    {
+      title: "Hydraulics & Specialty",
+      id: "03",
+      desc: "Specialized fluids including fire-resistant, biodegradable, and food-grade options.",
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+      ),
+      details: ["Fire-Resistant", "Food Grade", "Vacuum/Gears"]
     }
   ];
 
   return (
-    <section ref={sectionRef} id="sectors" className="py-16 sm:py-24 bg-white border-b border-slate-200">
+    <section ref={sectionRef} id="applications" className="py-16 sm:py-24 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header - Precision Layout */}
@@ -68,15 +68,15 @@ export default function Services() {
           <div className="max-w-xl">
              <div className="reveal opacity-0 flex items-center gap-3 mb-4">
                <div className="w-8 h-[1px] bg-slate-400"></div>
-               <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Core Sectors</span>
+               <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Target Markets</span>
              </div>
              <h2 className="reveal opacity-0 delay-100 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">
-               Operating <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-sky-400">Divisions</span>
+               Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-sky-400">Applications</span>
              </h2>
           </div>
           <div className="reveal opacity-0 delay-200 mt-6 md:mt-0">
             <p className="text-slate-500 max-w-sm text-sm leading-relaxed border-l border-slate-200 pl-6">
-              Delivering robust solutions across the three pillars of modern civilization—water, power, and infrastructure.
+              Delivering specialized synthetic solutions for the most demanding industrial sectors.
             </p>
           </div>
         </div>

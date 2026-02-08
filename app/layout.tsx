@@ -15,21 +15,21 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WCI Global | Water, Power, Infrastructure",
-  description: "WCI Global is a leading provider of sustainable solutions in water management, power generation, and critical infrastructure development worldwide. Engineering excellence for a sustainable future.",
-  keywords: ["infrastructure", "water management", "power generation", "sustainable engineering", "global infrastructure"],
-  authors: [{ name: "WCI Global" }],
+  title: "WIPA Chemicals | ECOSYN Synthetic Lubricants",
+  description: "WIPA Chemicals International (WCI) specializes in high-performance ECOSYN synthetic lubricants. Advanced ester and PAO technology for compressors, engines, and industrial applications.",
+  keywords: ["synthetic lubricants", "ECOSYN", "ester oil", "PAO oil", "compressor oil", "engine oil", "WIPA chemicals", "WCI", "industrial lubricants"],
+  authors: [{ name: "WIPA Chemicals International" }],
   openGraph: {
-    title: "WCI Global | Water, Power, Infrastructure",
-    description: "Engineering excellence for a sustainable future. Leading provider of water, power, and infrastructure solutions worldwide.",
+    title: "WIPA Chemicals | ECOSYN Synthetic Lubricants",
+    description: "High-performance synthetic lubricants engineered for superior protection and efficiency. Discover our ECOSYN range for compressors, engines, and hydraulics.",
     type: "website",
     locale: "en_US",
-    siteName: "WCI Global",
+    siteName: "WIPA Chemicals",
   },
   twitter: {
     card: "summary_large_image",
-    title: "WCI Global | Water, Power, Infrastructure",
-    description: "Engineering excellence for a sustainable future.",
+    title: "WIPA Chemicals | ECOSYN Synthetic Lubricants",
+    description: "High-performance synthetic lubricants engineered for superior protection and efficiency.",
   },
   robots: {
     index: true,

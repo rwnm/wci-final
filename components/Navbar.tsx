@@ -13,7 +13,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const navItems = ["Sectors", "Services", "About", "Contact"]
+  const navItems = ["Products", "Applications", "Benefits", "Contact"]
 
   return (
     <>
@@ -37,14 +37,14 @@ export default function Navbar() {
               <div className="hidden sm:flex flex-col">
                 <span className={`text-base font-bold tracking-tight transition-colors duration-300 ${
                   isScrolled ? "text-slate-900" : "text-slate-900"
-                }`}>WCI Global</span>
-                <span className="text-[10px] font-medium text-sky-600 uppercase tracking-[0.2em]">Water · Power · Infrastructure</span>
+                }`}>WIPA Chemicals</span>
+                <span className="text-[10px] font-medium text-sky-600 uppercase tracking-[0.2em]">Advanced Synthetic Lubricants</span>
               </div>
             </Link>
             
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1">
-              {navItems.map((item) => (
+              {["Products", "Applications", "Benefits", "Contact"].map((item) => (
                 <a 
                   key={item} 
                   href={`#${item.toLowerCase()}`} 

@@ -27,10 +27,10 @@ export default function Metrics() {
   }, [])
 
   const stats = [
-    { label: "Countries", value: 60, suffix: "+", desc: "Global Presence" },
-    { label: "Projects", value: 150, suffix: "+", desc: "Completed Successfully" },
-    { label: "Years", value: 30, suffix: "+", desc: "Industry Experience" },
-    { label: "Clients", value: 500, suffix: "+", desc: "Trusted Partners" },
+    { label: "Countries", value: 50, suffix: "+", desc: "Global Distribution" },
+    { label: "Products", value: 200, suffix: "+", desc: "Specialized Formulas" },
+    { label: "Years", value: 25, suffix: "+", desc: "Chemical Expertise" },
+    { label: "Industries", value: 12, suffix: "+", desc: "Sectors Served" },
   ];
 
   // Animated counter component
@@ -85,13 +85,13 @@ export default function Metrics() {
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-sky-300 text-xs font-semibold uppercase tracking-wider mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
-            By The Numbers
+            Global Impact
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
-            Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-400">Excellence</span>
+            Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-400">Performance</span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Three decades of delivering world-class infrastructure solutions across the globe.
+            Decades of specialized lubricant engineering and distribution worldwide.
           </p>
         </div>
         

@@ -25,65 +25,64 @@ export default function ProductLines() {
 
   const services = [
     {
-      title: "Strategic Planning",
-      desc: "Comprehensive feasibility studies and master planning.",
+      title: "Extended Life",
+      desc: "Drain intervals up to 8x longer than mineral oils, significantly reducing maintenance downtime.",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      id: "S01"
+      id: "B01"
     },
     {
-      title: "Engineering Design",
-      desc: "Civil, structural, and electrical engineering solutions.",
+      title: "Energy Efficiency",
+      desc: "Low friction coefficients reduce energy consumption and operating temperatures.",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      id: "S02"
+      id: "B02"
     },
     {
-      title: "Construction Mgmt",
-      desc: "End-to-end management ensuring quality and safety.",
+      title: "System Protection",
+      desc: "Superior thermal and oxidation stability with excellent anti-wear properties.",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
-      id: "S03"
+      id: "B03"
     },
     {
-      title: "Asset Operations",
-      desc: "Lifecycle management and maintenance optimization.",
+      title: "Sustainability",
+      desc: "Biodegradable options with minimized environmental impact and low volatility.",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      id: "S04"
+      id: "B04"
     },
   ];
 
   return (
-    <section ref={sectionRef} id="services" className="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
+    <section ref={sectionRef} id="benefits" className="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 pb-8 border-b border-slate-200">
            <div className="max-w-xl">
               <div className="reveal opacity-0 flex items-center gap-3 mb-4">
                  <div className="w-8 h-[1px] bg-sky-500"></div>
-                 <span className="text-xs font-mono text-sky-600 uppercase tracking-widest">Capabilities</span>
+                 <span className="text-xs font-mono text-sky-600 uppercase tracking-widest">Key Advantages</span>
               </div>
               <h2 className="reveal opacity-0 delay-100 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900">
-                Integrated <span className="text-slate-500">Service Matrix</span>
+                Performance <span className="text-slate-500">Benefits</span>
               </h2>
            </div>
            <div className="reveal opacity-0 delay-200 mt-6 md:mt-0">
              <a href="#contact" className="group inline-flex items-center gap-2 text-sm font-semibold text-sky-600 uppercase tracking-wider hover:text-sky-500 transition-colors">
-               <span>Access Full Catalog</span>
+               <span>Request Data Sheet</span>
                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                </svg>

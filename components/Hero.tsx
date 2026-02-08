@@ -52,31 +52,31 @@ export default function Hero() {
             {/* Architectural Badge */}
             <div className="reveal opacity-0 w-fit mb-6 lg:mb-8 border border-sky-500/30 bg-sky-500/10 backdrop-blur-sm px-4 py-1.5 flex items-center gap-3">
               <div className="w-2 h-2 bg-sky-400 rounded-sm animate-pulse" />
-              <span className="text-xs font-mono text-sky-300 tracking-[0.2em] uppercase">System Status: Optimal</span>
+              <span className="text-xs font-mono text-sky-300 tracking-[0.2em] uppercase">Formulation: 100% Synthetic</span>
             </div>
             
             {/* Headline */}
             <h1 className="reveal opacity-0 delay-100 text-4xl sm:text-6xl lg:text-8xl font-bold tracking-tighter text-white mb-6 lg:mb-8 leading-[0.9]">
-              GLOBAL <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-white">INFRA</span><br />
-              STRUCTURE
+              ECOSYN <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-white">SYNTHETIC</span><br />
+              LUBRICANTS
             </h1>
             
             {/* Technical Subheadline */}
             <div className="reveal opacity-0 delay-200 border-l-2 border-sky-500/50 pl-6 mb-8 lg:mb-12 max-w-xl">
               <p className="text-base sm:text-lg text-slate-400 font-light leading-relaxed">
-                Engineering precision for critical systems. Water management, power generation, and industrial fabrication executed with military-grade standards.
+                High-performance lubrication technology. Formulated with ester and PAO base fluids for superior protection, extended drain intervals, and optimal efficiency in demanding conditions.
               </p>
             </div>
             
             {/* CTA Buttons */}
             <div className="reveal opacity-0 delay-300 flex flex-wrap gap-4 lg:gap-6">
               <a 
-                href="#sectors" 
+                href="#applications" 
                 className="group relative px-6 py-3 lg:px-8 lg:py-4 bg-sky-600 hover:bg-sky-500 text-white transition-all duration-300 flex items-center gap-4 overflow-hidden"
               >
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
-                <span className="font-mono text-xs sm:text-sm tracking-widest uppercase">Explore Sectors</span>
+                <span className="font-mono text-xs sm:text-sm tracking-widest uppercase">View Applications</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -85,7 +85,7 @@ export default function Hero() {
                 href="#contact" 
                 className="group px-6 py-3 lg:px-8 lg:py-4 border border-slate-600 hover:border-sky-400 text-slate-300 hover:text-white transition-all duration-300 flex items-center gap-4"
               >
-                <span className="font-mono text-xs sm:text-sm tracking-widest uppercase">Initiate Contact</span>
+                <span className="font-mono text-xs sm:text-sm tracking-widest uppercase">Contact Sales</span>
               </a>
             </div>
           </div>
@@ -114,12 +114,12 @@ export default function Hero() {
                 <div className="absolute top-1/4 right-0 flex items-center gap-2 animate-pulse">
                    <div className="w-2 h-2 bg-sky-500 rounded-full" />
                    <div className="h-px w-12 bg-sky-500/50" />
-                   <span className="text-[10px] font-mono text-sky-400">SECURE.01</span>
+                   <span className="text-[10px] font-mono text-sky-400">THERMAL.STABILITY</span>
                 </div>
                 <div className="absolute bottom-1/4 left-0 flex items-center gap-2 flex-row-reverse animate-pulse delay-75">
                    <div className="w-2 h-2 bg-emerald-500 rounded-full" />
                    <div className="h-px w-12 bg-emerald-500/50" />
-                   <span className="text-[10px] font-mono text-emerald-400">ACTIVE.04</span>
+                   <span className="text-[10px] font-mono text-emerald-400">LOW.VOLATILITY</span>
                 </div>
              </div>
           </div>
@@ -130,10 +130,10 @@ export default function Hero() {
       {/* Bottom Bar */}
       <div className="absolute bottom-0 w-full border-t border-slate-800 bg-[#0F172A]/90 backdrop-blur-sm py-4">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center text-xs font-mono text-slate-500">
-           <span>COORD: 34.0522° N, 118.2437° W</span>
+           <span>ORIGIN: BELGIUM</span>
            <div className="flex gap-8">
-             <span>LATENCY: 12ms</span>
-             <span>UPTIME: 99.99%</span>
+             <span>DRAIN INTERVAL: 8X</span>
+             <span>BASE: ESTER/PAO</span>
            </div>
         </div>
       </div>

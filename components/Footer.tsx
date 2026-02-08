@@ -24,9 +24,9 @@ export default function Footer() {
   }, [])
 
   const footerLinks = {
-    sectors: ["Water Management", "Power Generation", "Infrastructure", "Sustainability"],
-    company: ["About Us", "Our Projects", "Investor Relations", "Careers"],
-    resources: ["Case Studies", "News & Insights", "Technical Papers", "FAQ"],
+    sectors: ["Compressors", "Engines", "Hydraulics", "Specialty"],
+    company: ["About WIPA", "Our Heritage", "Contact", "Distributors"],
+    resources: ["TDS/SDS Sheets", "Case Studies", "Technical Papers", "FAQ"],
     internal: ["OpenClaw Demo"]
   }
 
@@ -63,13 +63,13 @@ export default function Footer() {
           }} />
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
             <div>
-              <h3 className="text-3xl lg:text-4xl font-bold mb-4">Ready to Build the Future?</h3>
+              <h3 className="text-3xl lg:text-4xl font-bold mb-4">Optimize Your Performance</h3>
               <p className="text-lg text-white/80 max-w-xl">
-                Let&apos;s discuss how WCI Global can help bring your infrastructure vision to life.
+                Contact our experts to find the right ECOSYN solution for your application.
               </p>
             </div>
             <a 
-              href="mailto:contact@wciglobal.com" 
+              href="mailto:info@wipa-chemicals.com" 
               className="shrink-0 inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 font-semibold rounded-xl hover:bg-slate-100 transition-colors duration-300 shadow-lg"
             >
               <span>Get in Touch</span>
@@ -89,12 +89,12 @@ export default function Footer() {
                 <span className="text-white font-bold text-sm">WCI</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-bold text-white">WCI Global</span>
-                <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">Water · Power · Infrastructure</span>
+                <span className="text-lg font-bold text-white">WIPA Chemicals</span>
+                <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">Advanced Synthetic Lubricants</span>
               </div>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Leading the development of sustainable water, power, and infrastructure projects worldwide. Engineering excellence for a better tomorrow.
+              Belgian engineering excellence in synthetic lubricants. Delivering superior protection and efficiency worldwide.
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
@@ -112,11 +112,11 @@ export default function Footer() {
 
           {/* Sectors */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-6 uppercase tracking-wider">Sectors</h4>
+            <h4 className="text-sm font-semibold text-white mb-6 uppercase tracking-wider">Applications</h4>
             <ul className="space-y-4">
               {footerLinks.sectors.map(item => (
                 <li key={item}>
-                  <a href="#sectors" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">
+                  <a href="#applications" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">
                     {item}
                   </a>
                 </li>
@@ -170,7 +170,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="reveal opacity-0 delay-200 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} WCI Global. All rights reserved.
+            © {new Date().getFullYear()} WIPA Chemicals International. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6">
             {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(item => (
