@@ -4,6 +4,7 @@ import Metrics from "@/components/Metrics";
 import ProductLines from "@/components/ProductLines";
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <ProductLines />
       <Metrics />
+      <ContactSection />
       <Footer />
     </main>
   );

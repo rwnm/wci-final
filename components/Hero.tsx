@@ -49,11 +49,6 @@ export default function Hero() {
           
           {/* Content - Asymmetric Layout (7 cols) */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Architectural Badge */}
-            <div className="reveal opacity-0 w-fit mb-6 lg:mb-8 border border-sky-500/30 bg-sky-500/10 backdrop-blur-sm px-4 py-1.5 flex items-center gap-3">
-              <div className="w-2 h-2 bg-sky-400 rounded-sm animate-pulse" />
-              <span className="text-xs font-mono text-sky-300 tracking-[0.2em] uppercase">Formulation: 100% Synthetic</span>
-            </div>
             
             {/* Headline */}
             <h1 className="reveal opacity-0 delay-100 text-4xl sm:text-6xl lg:text-8xl font-bold tracking-tighter text-white mb-6 lg:mb-8 leading-[0.9]">

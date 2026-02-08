@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import Link from "next/link"
 
 export default function Footer() {
   const footerRef = useRef<HTMLElement>(null)
@@ -25,7 +26,12 @@ export default function Footer() {
 
   const footerLinks = {
     sectors: ["Compressors", "Engines", "Hydraulics", "Specialty"],
-    company: ["About WIPA", "Our Heritage", "Contact", "Distributors"],
+    company: [
+      { name: "About WIPA", href: "#about" },
+      { name: "Our Heritage", href: "#about" },
+      { name: "Contact", href: "/contact" },
+      { name: "Distributors", href: "#distributors" }
+    ],
     resources: ["TDS/SDS Sheets", "Case Studies", "Technical Papers", "FAQ"],
     internal: ["OpenClaw Demo"]
   }
@@ -44,7 +50,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer ref={footerRef} id="contact" className="bg-slate-950 text-white pt-24 lg:pt-32 relative overflow-hidden">
+    <footer ref={footerRef} className="bg-slate-950 text-white pt-24 lg:pt-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 opacity-[0.02]" style={{ 
@@ -68,15 +74,15 @@ export default function Footer() {
                 Contact our experts to find the right ECOSYN solution for your application.
               </p>
             </div>
-            <a 
-              href="mailto:info@wipa-chemicals.com" 
+            <Link 
+              href="/contact" 
               className="shrink-0 inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 font-semibold rounded-xl hover:bg-slate-100 transition-colors duration-300 shadow-lg"
             >
               <span>Get in Touch</span>
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -129,10 +135,10 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-white mb-6 uppercase tracking-wider">Company</h4>
             <ul className="space-y-4">
               {footerLinks.company.map(item => (
-                <li key={item}>
-                  <a href="#about" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">
-                    {item}
-                  </a>
+                <li key={item.name}>
+                  <Link href={item.href} className="text-sm text-slate-400 hover:text-white transition-colors duration-300">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>

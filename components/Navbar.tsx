@@ -44,7 +44,7 @@ export default function Navbar() {
             
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1">
-              {["Products", "Applications", "Benefits", "Contact"].map((item) => (
+              {["Products", "Applications", "Benefits"].map((item) => (
                 <a 
                   key={item} 
                   href={`#${item.toLowerCase()}`} 
@@ -55,14 +55,22 @@ export default function Navbar() {
                   {item}
                 </a>
               ))}
+              <Link
+                href="/contact"
+                className={`px-5 py-2.5 text-sm font-medium transition-all duration-300 rounded-lg hover:bg-slate-100 ${
+                  isScrolled ? "text-slate-600 hover:text-slate-900" : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                Contact
+              </Link>
               <div className="w-px h-6 bg-slate-200 mx-4" />
-              <a 
-                href="#contact" 
+              <Link 
+                href="/contact" 
                 className="group relative px-6 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-slate-900/20"
               >
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-sky-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -91,7 +99,7 @@ export default function Navbar() {
         }`}>
           <div className="flex flex-col h-full p-8 pt-24">
             <nav className="space-y-4 flex-1">
-              {navItems.map((item, i) => (
+              {["Products", "Applications", "Benefits"].map((item, i) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -102,10 +110,18 @@ export default function Navbar() {
                   {item}
                 </a>
               ))}
+              <Link
+                href="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-4 text-xl font-medium text-slate-900 hover:bg-slate-50 rounded-xl transition-colors border-b border-slate-100 last:border-0"
+                style={{ animationDelay: `150ms` }}
+              >
+                Contact
+              </Link>
             </nav>
             <div className="mt-auto pt-8 border-t border-slate-100 pb-8">
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="group relative block w-full py-4 bg-slate-900 text-white text-center font-semibold rounded-xl overflow-hidden transition-all active:scale-[0.98]"
               >
