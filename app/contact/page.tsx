@@ -1,11 +1,18 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Contact WIPA Chemicals | Global Technical Support",
+  description: "Get in touch with WIPA Chemicals for technical support, product inquiries, and distribution opportunities. Global headquarters in Belgium.",
+}
+
 export default function Contact() {
   return (
     <main className="min-h-screen bg-slate-50">
       <Navbar />
-      
+
       {/* Header */}
       <div className="bg-slate-900 pt-32 pb-20 px-6 sm:px-8 lg:px-12 text-center text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-tr from-sky-900/20 to-transparent pointer-events-none" />
@@ -17,7 +24,7 @@ export default function Contact() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-16">
-          
+
           {/* Contact Details */}
           <div className="space-y-12">
             <div>
@@ -75,7 +82,7 @@ export default function Contact() {
                   <span className="text-slate-500 font-medium">Interactive Map Placeholder</span>
                 </div>
               </div>
-              <iframe 
+              <iframe
                 className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.6666324263385!2d3.737151315756464!3d51.13333397957519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c376f9c9b5a0ab%3A0x6b8f3e3e3e3e3e3e!2sDurmakker%2017%2C%209940%20Evergem%2C%20Belgium!5e0!3m2!1sen!2sus!4v1625680000000!5m2!1sen!2sus"
                 loading="lazy"
@@ -162,7 +169,7 @@ export default function Contact() {
 
         </div>
       </div>
-      
+
       <Footer />
     </main>
   )
