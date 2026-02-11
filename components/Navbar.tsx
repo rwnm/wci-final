@@ -130,7 +130,7 @@ export default function Navbar() {
                   </svg>
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-sky-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
